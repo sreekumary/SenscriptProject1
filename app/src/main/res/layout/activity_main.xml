@@ -1,0 +1,313 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/tool_bar"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <!-- <RelativeLayout
+             android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/flag"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:alpha=".7"
+                android:src="@drawable/avatar" />
+
+
+
+        </RelativeLayout>-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:alpha=".6"
+                android:src="@drawable/avatar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="Welcome."
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                app:layout_constraintStart_toStartOf="@id/image"
+                app:layout_constraintTop_toTopOf="@id/image" />
+
+            <TextView
+                android:id="@+id/name_text_entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toStartOf="@id/name_text"
+                app:layout_constraintTop_toBottomOf="@id/name_text"
+                android:text="Millions of movies, TV"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:text="shows and people to"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="@id/name_text_entry"
+                app:layout_constraintTop_toBottomOf="@id/name_text_entry" />
+
+            <TextView
+                android:id="@+id/id_text_entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="shows and people to"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="@id/id_text"
+                app:layout_constraintTop_toBottomOf="@id/id_text"
+                tools:text="discover.Explore now." />
+
+            <EditText
+                android:id="@+id/search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:hint="Search for a movie,"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:inputType="text"
+                android:padding="5dp"
+                android:background="@drawable/rounded_edittext"
+                app:layout_constraintStart_toStartOf="@+id/id_text_entry"
+                app:layout_constraintTop_toBottomOf="@+id/id_text_entry"
+                 />
+
+
+            <Button
+                android:id="@+id/search_buttoni"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/search_button"
+                style="@style/button_colour"
+                android:text="Search"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                app:layout_goneMarginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/search_text"
+                app:layout_constraintStart_toEndOf="@+id/search_text"
+                app:layout_constraintTop_toBottomOf="@id/id_text_entry"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/trending"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/image">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trending"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="30dp"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:background="@drawable/bg_switch"
+                    android:padding="2.5dp">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchOnOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        android:textColor="@color/white"
+                        android:thumb="@drawable/thumb_selector"
+                        app:switchMinWidth="140dp"
+                        app:track="@drawable/track_selector" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/tvSwitchYes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Today"
+                            android:textColor="#032541"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvSwitchNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="This week"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relativelayout"
+                app:layout_constraintTop_toBottomOf="@+id/trending"
+                android:layout_marginTop="20dp"
+                >
+
+                <!--Recycler View widget-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:scrollbars="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+
+
+
+
+<!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/trending">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                 <ImageView
+                     android:layout_width="200dp"
+                     android:layout_height="250dp"
+                     android:contentDescription="todo"
+                     android:layout_marginStart="30dp"
+                     android:background="@drawable/family"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Family Switch"
+                     android:layout_marginStart="70dp"
+                     android:layout_marginTop="10dp"
+                      />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nov 30 2023"
+                        android:layout_marginStart="80dp"
+                         />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="250dp"
+                        android:contentDescription="todo"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/freelance"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Family Switch"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nov 30 2023"
+                        android:layout_marginStart="80dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+  

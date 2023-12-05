@@ -1,0 +1,85 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+ <item
+     android:id="@+id/movies"
+     android:title="@string/movies"
+     android:contentDescription="@string/movies"
+     app:showAsAction="always" >
+  <menu>
+   <item
+       android:id="@+id/popularNow"
+       android:title="Popular"
+       app:showAsAction="ifRoom" />
+   <item
+       android:id="@+id/nowPlaying"
+       android:title="Now Playing"
+       app:showAsAction="ifRoom" />
+   <item
+       android:id="@+id/topRatedNow"
+       android:title="Top Rated"
+       app:showAsAction="ifRoom" />
+
+  </menu>
+
+
+ </item>
+
+ <item
+     android:id="@+id/tvshows"
+     android:title="@string/Tvshows"
+     android:contentDescription="@string/Tvshows"
+     app:showAsAction="always" >
+
+  <menu>
+   <item
+       android:id="@+id/popular"
+       android:title="Popular"
+       app:showAsAction="ifRoom" />
+   <item
+       android:id="@+id/topRated"
+       android:title="Top Rated"
+       app:showAsAction="ifRoom" />
+   <item
+       android:id="@+id/today"
+       android:title="Today Show"
+       app:showAsAction="ifRoom" />
+
+  </menu>
+
+ </item>
+
+ <item
+     android:id="@+id/people"
+     android:title="@string/People"
+     android:contentDescription="@string/People"
+     app:showAsAction="always" >
+  <menu>
+   <item
+       android:id="@+id/peopleWatch"
+       android:title="Watch"
+       app:showAsAction="ifRoom" >
+   </item>
+  </menu>
+ </item>
+
+ <item
+     android:id="@+id/more"
+     android:contentDescription="@string/More"
+     app:showAsAction="ifRoom"
+     android:title="More" >
+  <menu>
+   <item
+       android:id="@+id/settings"
+       android:title="Discussions"
+       app:showAsAction="ifRoom" />
+   <item
+       android:id="@+id/about"
+       android:title="Settings"
+       app:showAsAction="ifRoom" />
+
+  </menu>
+
+ </item>
+
+</menu>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="movies">Movies</string>
+    <string name="Tvshows">TV Shows</string>
+    <string name="People">People</string>
+    <string name="More">More\n</string>
+</resources>
